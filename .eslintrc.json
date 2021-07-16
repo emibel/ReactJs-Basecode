@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser", // Specifies the ESLint parser
+  "parserOptions": {
+    "ecmaVersion": 2020, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module", // Allows for the use of imports
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "react/prop-types": ["off"],
+    "max-len": ["error", { "code": 120 }],
+    "no-console": ["error"],
+    "semi": 1,
+    "@typescript-eslint/semi": 1,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/camelcase": 0,
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/jsx-filename-extension": [1, {"extensions": [".jsx", ".tsx"]}],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-trailing-spaces": 1,
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "eol-last": ["error", "always"],
+    "import/order": ["error", {"newlines-between": "always", "groups": ["builtin", "external", "sibling", "parent", "internal", "index" ]}]
+  }
+}
